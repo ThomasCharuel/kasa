@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    height: 3rem;
+  }
+
+  &__navigation {
+    ul {
+      display: flex;
+      gap: 2rem;
+    }
+
+    a.active {
+      text-decoration: underline;
+    }
+  }
+}

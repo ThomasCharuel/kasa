@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './index.module.scss';
 
 function StayCard({ title, picture }) {
   return (
-    <div>
-      <img src={picture} />
-      <h2>{title}</h2>
-    </div>
+    <article className={styles.card}>
+      <img src={picture} className={styles.card__picture} />
+      <h2 className={styles.card__title}>{title}</h2>
+    </article>
   );
 }
 
