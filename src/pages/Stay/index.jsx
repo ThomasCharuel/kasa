@@ -5,7 +5,6 @@ import Slideshow from '../../components/Slideshow';
 
 export default function Stay() {
   const { stay } = useLoaderData();
-  console.log(stay);
 
   return (
     <main>
