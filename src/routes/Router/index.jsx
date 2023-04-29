@@ -4,7 +4,8 @@ import Root from '../Root';
 import Error from '../../pages/Error';
 import Home from '../../pages/Home';
 import About from '../../pages/About';
-import Stay, { loader as stayLoader } from '../../pages/Stay';
+import Stay from '../../pages/Stay';
+import { staysLoader, stayLoader } from '../../utils/loaders';
 
 export default createBrowserRouter([
   {
@@ -17,6 +18,7 @@ export default createBrowserRouter([
           {
             path: '/',
             element: <Home />,
+            loader: staysLoader,
           },
           {
             path: '/about',

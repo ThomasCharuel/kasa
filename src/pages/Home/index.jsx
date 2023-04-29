@@ -1,17 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import StayCard from '../../components/StayCard';
 
 function Home() {
+  const { stays } = useLoaderData();
+
   return (
     <div>
       <h1>Home</h1>
       <ul>
-        <li>
-          <Link to="/stays/c67ab8a7">Stay 1</Link>
-        </li>
-        <li>
-          <Link to="/stays/b9123946">Stay 2</Link>
-        </li>
+        {stays.map((stay) => (
+          <li key={stay.id}>
+            <Link to={`/stays/${stay.id}`}>
+              <StayCard title={stay.title} picture={stay.pictures[0]} />
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
