@@ -5,6 +5,10 @@
     background-color: pink;
   }
 
+  &__content {
+    background-color: #F6F6F6;
+  }
+
   &.active &{
     &__icon {
       transform: rotate(180deg);
