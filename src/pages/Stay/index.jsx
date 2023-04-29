@@ -5,9 +5,9 @@ export default function Stay() {
   const { stay } = useLoaderData();
 
   return (
-    <div>
+    <main>
       {stay.id}
       {stay.title}
-    </div>
+    </main>
   );
 }

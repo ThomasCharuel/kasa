@@ -9,7 +9,7 @@ function Home() {
   const { stays } = useLoaderData();
 
   return (
-    <>
+    <main>
       <Banner picture={BannerPicture}>
         <h1>Chez vous, partout et ailleurs</h1>
       </Banner>
@@ -23,7 +23,7 @@ function Home() {
           </li>
         ))}
       </ul>
-    </>
+    </main>
   );
 }
 
