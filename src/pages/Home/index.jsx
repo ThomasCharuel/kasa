@@ -3,7 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import Banner from '../../components/Banner';
 import StayCard from '../../components/StayCard';
 import BannerPicture from '../../assets/home-banner.png';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 function Home() {
   const { stays } = useLoaderData();
