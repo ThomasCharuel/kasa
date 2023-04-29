@@ -27,6 +27,10 @@ export default createBrowserRouter([
             element: <Stay />,
             loader: stayLoader,
           },
+          {
+            path: '*',
+            element: <Error />,
+          },
         ],
       },
     ],
