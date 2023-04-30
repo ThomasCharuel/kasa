@@ -6,7 +6,7 @@ async function getStays() {
 
 async function getStay(stayId) {
   const { stays } = await getStays();
-  const stay = stays.filter((stay) => stay.id === stayId)[0];
+  const stay = stays.find((stay) => stay.id === stayId);
 
   return { stay };
 }
