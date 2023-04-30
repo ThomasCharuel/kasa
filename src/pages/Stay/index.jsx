@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Collapse from '../../components/Collapse';
 import Slideshow from '../../components/Slideshow';
+import HostCard from '../../components/HostCard';
 
 export default function Stay() {
   const { stay } = useLoaderData();
@@ -22,10 +23,7 @@ export default function Stay() {
           <header>
             <h1>{stay.title}</h1>
             <p>{stay.location}</p>
-            <div>
-              {stay.host.name}
-              <img src={stay.host.picture} />
-            </div>
+            <HostCard name={stay.host.name} picture={stay.host.picture} />
             <ul>
               {stay.tags.map((tag, index) => (
                 <li key={index}>
