@@ -14,7 +14,7 @@ export default createBrowserRouter([
     errorElement: <Root outlet={<Error />} />,
     children: [
       {
-        path: '',
+        index: true,
         element: <Home />,
         loader: staysLoader,
       },
