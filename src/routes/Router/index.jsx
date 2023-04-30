@@ -11,21 +11,25 @@ export default createBrowserRouter([
   {
     path: '/',
     element: <Root />,
-    errorElement: <Error />,
+    errorElement: <Root outlet={<Error />} />,
     children: [
       {
-        path: '/',
+        path: '',
         element: <Home />,
         loader: staysLoader,
       },
       {
-        path: '/about',
+        path: 'about',
         element: <About />,
       },
       {
         path: 'stays/:stayId',
         element: <Stay />,
         loader: stayLoader,
+      },
+      {
+        path: 'error',
+        element: <Error />,
       },
     ],
   },
