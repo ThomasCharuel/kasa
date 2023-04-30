@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  flex-direction: column;
+
+  .tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__secondContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

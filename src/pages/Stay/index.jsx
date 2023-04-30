@@ -5,6 +5,7 @@ import Slideshow from '../../components/Slideshow';
 import HostCard from '../../components/HostCard';
 import StayTag from '../../components/StayTag';
 import Rating from '../../components/Rating';
+import styles from './index.module.scss';
 
 export default function Stay() {
   const { stay } = useLoaderData();
@@ -22,16 +23,21 @@ export default function Stay() {
       {stay && (
         <>
           <Slideshow medias={stay.pictures} />
-          <header>
-            <h1>{stay.title}</h1>
-            <p>{stay.location}</p>
-            <HostCard name={stay.host.name} picture={stay.host.picture} />
-            <ul>
-              {stay.tags.map((tag, index) => (
-                <StayTag key={index} tag={tag} />
-              ))}
-            </ul>
-            <Rating rating={Number(stay.rating)} />
+          <header className={styles.header}>
+            <div className={styles.header__firstContainer}>
+              <h1>{stay.title}</h1>
+              <p>{stay.location}</p>
+
+              <ul className={styles.tags}>
+                {stay.tags.map((tag, index) => (
+                  <StayTag key={index} tag={tag} />
+                ))}
+              </ul>
+            </div>
+            <div className={styles.header__secondContainer}>
+              <Rating rating={Number(stay.rating)} />
+              <HostCard name={stay.host.name} picture={stay.host.picture} />
+            </div>
           </header>
           <div>
             <Collapse title="Description">
