@@ -4,6 +4,7 @@ import Collapse from '../../components/Collapse';
 import Slideshow from '../../components/Slideshow';
 import HostCard from '../../components/HostCard';
 import StayTag from '../../components/StayTag';
+import Rating from '../../components/Rating';
 
 export default function Stay() {
   const { stay } = useLoaderData();
@@ -30,7 +31,7 @@ export default function Stay() {
                 <StayTag key={index} tag={tag} />
               ))}
             </ul>
-            <div>{stay.rating}/5</div>
+            <Rating rating={Number(stay.rating)} />
           </header>
           <div>
             <Collapse title="Description">
