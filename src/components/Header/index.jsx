@@ -12,10 +12,14 @@ export default function Header() {
       <nav className={styles.header__navigation}>
         <ul>
           <li>
-            <NavLink to="/">Accueil</NavLink>
+            <NavLink to="/" className={({ isActive }) => (isActive ? styles.active : '')}>
+              Accueil
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/about">A Propos</NavLink>
+            <NavLink to="/about" className={({ isActive }) => (isActive ? styles.active : '')}>
+              A Propos
+            </NavLink>
           </li>
         </ul>
       </nav>
