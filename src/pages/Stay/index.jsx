@@ -3,6 +3,7 @@ import { useLoaderData, useNavigate } from 'react-router-dom';
 import Collapse from '../../components/Collapse';
 import Slideshow from '../../components/Slideshow';
 import HostCard from '../../components/HostCard';
+import StayTag from '../../components/StayTag';
 
 export default function Stay() {
   const { stay } = useLoaderData();
@@ -26,9 +27,7 @@ export default function Stay() {
             <HostCard name={stay.host.name} picture={stay.host.picture} />
             <ul>
               {stay.tags.map((tag, index) => (
-                <li key={index}>
-                  <p>{tag}</p>
-                </li>
+                <StayTag key={index} tag={tag} />
               ))}
             </ul>
             <div>{stay.rating}/5</div>
