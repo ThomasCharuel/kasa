@@ -12,3 +12,12 @@ $font-family-primary: 'Montserrat', sans-serif;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
+
+// Responsivity
+$tablet: "tablet";
+$desktop: "desktop";
+
+$breakpoints: (
+  $tablet: 768px,
+  $desktop: 992px,
+);
