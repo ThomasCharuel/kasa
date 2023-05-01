@@ -1,20 +1,30 @@
+@import '../../styles/variables';
+
 .slideshow {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
-  height: 20rem;
+  height: 16rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &__button {
     z-index: 2;
+    padding: 0.4rem;
+    img {
+      height: 1.4rem;
+    }
   }
 
   &__numbering {
+    display: none;
+    font-weight: $font-weight-medium;
+    font-size: 1.2rem;
     color: white;
     position: absolute;
-    bottom: 0;
+    bottom: 1.5rem;
     width: 100%;
     text-align: center;
   }

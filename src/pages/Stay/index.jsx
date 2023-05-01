@@ -19,7 +19,7 @@ export default function Stay() {
   }, []);
 
   return (
-    <main>
+    <main className={styles.main}>
       {stay && (
         <>
           <Slideshow medias={stay.pictures} />
