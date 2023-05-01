@@ -1,16 +1,22 @@
+@import '../../styles/variables';
+
 .card {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  width: 10rem;
+  width: 8rem;
 
   &__name {
     text-align: right;
+    color: $color-primary;
+    font-weight: $font-weight-medium;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
   }
 
   &__picture {
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
     object-fit: cover;
   }

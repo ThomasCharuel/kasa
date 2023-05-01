@@ -25,8 +25,8 @@ export default function Stay() {
           <Slideshow medias={stay.pictures} />
           <header className={styles.header}>
             <div className={styles.header__firstContainer}>
-              <h1>{stay.title}</h1>
-              <p>{stay.location}</p>
+              <h1 className={styles.header__title}>{stay.title}</h1>
+              <p className={styles.header__location}>{stay.location}</p>
 
               <ul className={styles.tags}>
                 {stay.tags.map((tag, index) => (
@@ -39,7 +39,7 @@ export default function Stay() {
               <HostCard name={stay.host.name} picture={stay.host.picture} />
             </div>
           </header>
-          <div>
+          <div className={styles.contentSection}>
             <Collapse title="Description">
               <p>{stay.description}</p>
             </Collapse>
