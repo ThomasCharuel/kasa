@@ -9,9 +9,12 @@ function Home() {
   const { stays } = useLoaderData();
 
   return (
-    <main>
+    <main className={styles.main}>
       <Banner picture={BannerPicture}>
-        <h1>Chez vous, partout et ailleurs</h1>
+        <h1 className={styles.bannerHeading}>
+          Chez vous,
+          <br /> partout et ailleurs
+        </h1>
       </Banner>
 
       <ul className={styles.stays__listing}>

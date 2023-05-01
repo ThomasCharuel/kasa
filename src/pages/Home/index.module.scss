@@ -1,5 +1,17 @@
+@import '../../styles/variables';
+
+.main {
+  padding: 0 1rem 1rem;
+}
+
+.bannerHeading {
+  font-weight: $font-weight-medium;
+  font-size: 1.6rem;
+}
+
 .stays__listing {
+  padding: 1.4rem 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.2rem;
 }
