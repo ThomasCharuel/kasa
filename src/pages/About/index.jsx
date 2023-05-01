@@ -29,7 +29,7 @@ const aboutSections = [
 
 function About() {
   return (
-    <main>
+    <main className={styles.main}>
       <Banner picture={BannerPicture} />
       <ul className={styles.about__listing}>
         {aboutSections.map((section, index) => (

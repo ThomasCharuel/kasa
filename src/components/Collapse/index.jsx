@@ -8,13 +8,13 @@ function Collapse({ title, children, isCollapsedInit = true }) {
 
   return (
     <article className={styles.collapse + (!isCollapsed ? ` ${styles.active}` : '')}>
-      <header className={styles.collapse__header}>
-        <h2 className={styles.collapse__title}>{title}</h2>
-        <button onClick={() => setIsCollapsed(!isCollapsed)}>
-          <img src={AngleDown} className={styles.collapse__icon} />
+      <header className={styles.header}>
+        <h2 className={styles.header__title}>{title}</h2>
+        <button onClick={() => setIsCollapsed(!isCollapsed)} className={styles.collapseButton}>
+          <img src={AngleDown} className={styles.collapseButton__icon} />
         </button>
       </header>
-      {!isCollapsed && <div className={styles.collapse__content}>{children}</div>}
+      {!isCollapsed && <div className={styles.content}>{children}</div>}
     </article>
   );
 }
