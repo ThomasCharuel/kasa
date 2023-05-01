@@ -1,7 +1,10 @@
+@import '../../styles/variables';
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 
   &__logo {
     height: 3rem;
@@ -13,8 +16,15 @@
       gap: 2rem;
     }
 
-    a.active {
-      text-decoration: underline;
+    a {
+      color: $color-primary;
+      text-transform: uppercase;
+      font-weight: $font-weight-medium;
+      font-size: 1rem;
+
+      &:hover, &.active {
+        text-decoration: underline;
+      }
     }
   }
 }
