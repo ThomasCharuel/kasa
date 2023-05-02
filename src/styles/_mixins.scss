@@ -1,0 +1,6 @@
+// Responsive mobile first
+@mixin media-query-for-screen($screen) {
+  @media screen and (min-width: map-get($breakpoints, $screen)) {
+    @content;
+  }
+}
