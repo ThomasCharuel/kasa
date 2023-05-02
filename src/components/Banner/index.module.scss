@@ -31,5 +31,6 @@
 @include media-query-for-screen($desktop) {
   .banner {
     border-radius: 25px;
+    height: 14rem;
   }
 }
