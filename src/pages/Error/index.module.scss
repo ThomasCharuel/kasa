@@ -1,7 +1,8 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .main {
-  padding: 8rem 1rem 5rem;
+  padding: 6rem 1rem 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,4 +27,21 @@
   color: $color-primary;
   font-weight: $font-weight-medium;
   text-decoration: underline;
+}
+
+@include media-query-for-screen($desktop) {
+  .main {
+    padding: 3rem 1rem 5rem;
+  }
+  .errorCode {
+    font-size: 16rem;
+  }
+
+  .errorMessage {
+    font-size: 2.2rem;
+  }
+
+  .homePageLink {
+    font-size: 1.1rem;
+  }
 }
