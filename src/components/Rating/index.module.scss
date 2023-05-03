@@ -1,5 +1,17 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .rating {
+  display: flex;
   img {
     height: 1.6rem;
+  }
+}
+
+@include media-query-for-screen($desktop) {
+  .rating {
+    img {
+      height: 3rem;
+    }
   }
 }

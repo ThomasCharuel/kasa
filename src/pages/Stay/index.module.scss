@@ -9,17 +9,16 @@
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 
   &__title {
     color: $color-primary;
     font-weight: $font-weight-medium;
     font-size: 1.2rem;
-    line-height: 1.6rem;
   }
 
   &__location {
     padding-top: 0.2rem;
-    line-height: 1.5rem;
     color: $color-primary;
     font-weight: $font-weight-medium;
     font-size: 0.9rem;
@@ -33,7 +32,6 @@
   }
 
   &__secondContainer {
-    padding-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,8 +42,39 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.3rem;
+}
 
-  @include media-query-for-screen($desktop) {
+@include media-query-for-screen($desktop) {
+  .main {
+    padding: 0 2rem 2rem;
+    margin: auto;
+    max-width: 1200px;
+  }
+
+  .header {
+    padding: 2rem 0;
+    flex-direction: row;
+    justify-content: space-between;
+    &__title {
+      font-size: 2.3rem;
+    }
+
+    &__location {
+      padding-top: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .tags {
+      padding-top: 1.6rem;
+    }
+
+    &__secondContainer {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+    }
+  }
+
+  .contentSection {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
