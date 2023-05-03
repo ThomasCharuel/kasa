@@ -3,9 +3,9 @@
 
 .collapse {
   border-radius: 5px;
-  background-color: $color-light-grey;
 
   &.active {
+    background-color: $color-light-grey;
     .collapseButton {
       transform: rotate(-180deg);
     }
