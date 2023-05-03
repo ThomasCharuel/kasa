@@ -17,7 +17,7 @@ function Home() {
       <ul className={styles.stays__listing}>
         {stays.map((stay) => (
           <li key={stay.id}>
-            <Link to={`/stays/${stay.id}`}>
+            <Link to={`/stays/${stay.id}`} className={styles.stayLink}>
               <StayCard title={stay.title} picture={stay.pictures[0]} />
             </Link>
           </li>

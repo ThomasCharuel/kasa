@@ -17,6 +17,11 @@
   gap: 1.2rem;
 }
 
+.stayLink {
+  display: inline-block;
+  @include hover-focus-transition;
+}
+
 @include media-query-for-screen($desktop) {
   .main {
     padding: 0 2rem 2rem;
