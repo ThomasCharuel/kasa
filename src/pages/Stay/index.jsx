@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Collapse from '../../components/Collapse';
-import Slideshow from '../../components/Slideshow';
+import Gallery from '../../components/Gallery';
 import HostCard from '../../components/HostCard';
 import StayTag from '../../components/StayTag';
 import Rating from '../../components/Rating';
@@ -22,7 +22,7 @@ export default function Stay() {
     <main className={styles.main}>
       {stay && (
         <>
-          <Slideshow medias={stay.pictures} />
+          <Gallery medias={stay.pictures} />
           <header className={styles.header}>
             <div className={styles.header__firstContainer}>
               <h1 className={styles.header__title}>{stay.title}</h1>

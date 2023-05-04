@@ -6,30 +6,30 @@
 
   &.active {
     background-color: $color-light-grey;
-    .collapseButton {
+    .header__icon {
       transform: rotate(-180deg);
     }
   }
 }
 
 .header {
-  padding: 0.2rem 0.6rem 0.2rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: $color-primary;
-  border-radius: 5px; 
+  border-radius: 5px;
+
+  .collapseButton {
+    width: 100%;
+    padding: 0.2rem 0.6rem 0.2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__title {
     color: $color-white;
     font-weight: $font-weight-medium;
     font-size: 1rem;
   }
-}
 
-.collapseButton {
-  display: flex;
-  
   &__icon {
     height: 1.6rem;
   }
@@ -45,14 +45,14 @@
 
 @include media-query-for-screen($desktop) {
   .header {
-    padding: 0.6rem 1rem 0.6rem 1rem;
-  
+    .collapseButton {
+      padding: 0.6rem 1rem 0.6rem 1rem;
+    }
+
     &__title {
       font-size: 1.5rem;
     }
-  }
 
-  .collapseButton {
     &__icon {
       height: 2rem;
     }
