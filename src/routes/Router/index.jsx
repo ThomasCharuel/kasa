@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import Root from '../Root';
 import Error from '../../pages/Error';
 import Home from '../../pages/Home';
@@ -7,7 +7,7 @@ import About from '../../pages/About';
 import Stay from '../../pages/Stay';
 import { staysLoader, stayLoader } from '../../utils/loaders';
 
-export default createBrowserRouter([
+export default createHashRouter([
   {
     path: '/',
     element: <Root />,
