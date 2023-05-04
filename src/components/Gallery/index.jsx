@@ -4,7 +4,7 @@ import styles from './index.module.scss';
 import AngleRight from '../../assets/angle-right.svg';
 import AngleLeft from '../../assets/angle-left.svg';
 
-function Slideshow({ medias }) {
+function Gallery({ medias }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -24,7 +24,7 @@ function Slideshow({ medias }) {
   };
 
   return (
-    <div className={styles.slideshow}>
+    <div className={styles.gallery}>
       {medias.map((media, index) => (
         <img
           key={index}
@@ -34,13 +34,13 @@ function Slideshow({ medias }) {
       ))}
       {medias.length > 0 && (
         <>
-          <button onClick={prevSlide} className={styles.slideshow__button}>
+          <button onClick={prevSlide} className={styles.gallery__button}>
             <img src={AngleLeft} />
           </button>
-          <button onClick={nextSlide} className={styles.slideshow__button}>
+          <button onClick={nextSlide} className={styles.gallery__button}>
             <img src={AngleRight} />
           </button>
-          <p className={styles.slideshow__numbering}>
+          <p className={styles.gallery__numbering}>
             {currentIndex + 1}/{medias.length}
           </p>
         </>
@@ -49,8 +49,8 @@ function Slideshow({ medias }) {
   );
 }
 
-Slideshow.propTypes = {
+Gallery.propTypes = {
   medias: PropTypes.arrayOf(PropTypes.string),
 };
 
-export default Slideshow;
+export default Gallery;
