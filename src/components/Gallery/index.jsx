@@ -8,19 +8,11 @@ function Gallery({ medias }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    if (currentIndex < medias.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    } else {
-      setCurrentIndex(0);
-    }
+    currentIndex < medias.length - 1 ? setCurrentIndex(currentIndex + 1) : setCurrentIndex(0);
   };
 
   const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    } else {
-      setCurrentIndex(medias.length - 1);
-    }
+    currentIndex > 0 ? setCurrentIndex(currentIndex - 1) : setCurrentIndex(medias.length - 1);
   };
 
   return (
