@@ -1,22 +1,24 @@
 import stays from '../../data/stays.json';
 
-async function getStays() {
+const getStays = async () => {
   return { stays };
-}
+};
 
-async function getStay(stayId) {
+const getStay = async (stayId) => {
   const { stays } = await getStays();
   const stay = stays.find((stay) => stay.id === stayId);
 
   return { stay };
-}
+};
 
-export async function staysLoader() {
+const staysLoader = async () => {
   const { stays } = await getStays();
   return { stays };
-}
+};
 
-export async function stayLoader({ params }) {
+const stayLoader = async ({ params }) => {
   const { stay } = await getStay(params.stayId);
   return { stay };
-}
+};
+
+export { staysLoader, stayLoader };
