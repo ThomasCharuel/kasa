@@ -32,7 +32,7 @@ function Gallery({ medias }) {
           className={styles.slide + (index === currentIndex ? ` ${styles.active}` : '')}
         />
       ))}
-      {medias.length > 0 && (
+      {medias.length > 1 && (
         <>
           <button onClick={prevSlide} className={styles.gallery__button}>
             <img src={AngleLeft} />
