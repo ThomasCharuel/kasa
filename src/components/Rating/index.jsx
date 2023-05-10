@@ -5,16 +5,11 @@ import StarFull from '../../assets/star-full.svg';
 import StarEmpty from '../../assets/star-empty.svg';
 
 function Rating({ rating }) {
-  const emptyStarsToDisplay = 5 - rating;
-
   return (
     <div className={styles.rating}>
-      {[...Array(rating)].map((_, i) => (
-        <img key={i} src={StarFull} />
-      ))}
-      {[...Array(emptyStarsToDisplay)].map((_, i) => (
-        <img key={i} src={StarEmpty} />
-      ))}
+      {[...Array(5)].map((_, i) =>
+        i < rating ? <img key={i} src={StarFull} /> : <img key={i} src={StarEmpty} />,
+      )}
     </div>
   );
 }
