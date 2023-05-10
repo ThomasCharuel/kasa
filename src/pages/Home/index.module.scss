@@ -22,6 +22,18 @@
   @include hover-focus-transition;
 }
 
+@include media-query-for-screen($bigphone) {
+  .stays__listing {
+    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    li {
+      text-align: center;
+    }
+  }
+}
+
 @include media-query-for-screen($desktop) {
   .main {
     padding: 0 2rem 2rem;
@@ -34,11 +46,9 @@
   }
 
   .stays__listing {
-    margin-top: 2rem;
     padding: 2rem;
     background-color: $color-light-grey;
     border-radius: 25px;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
   }
 }

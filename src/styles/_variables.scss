@@ -1,9 +1,9 @@
 // Colors
-$color-primary: #FF6060;
+$color-primary: #ff6060;
 
 $color-black: #000000;
-$color-light-grey: #F6F6F6;
-$color-white: #FFFFFF;
+$color-light-grey: #f6f6f6;
+$color-white: #ffffff;
 
 // Fonts
 $font-family-primary: 'Montserrat', sans-serif;
@@ -14,10 +14,12 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 
 // Responsivity
-$tablet: "tablet";
-$desktop: "desktop";
+$bigphone: 'bigphone';
+$tablet: 'tablet';
+$desktop: 'desktop';
 
 $breakpoints: (
+  $bigphone: 576px,
   $tablet: 768px,
   $desktop: 992px,
 );
